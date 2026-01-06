@@ -1,0 +1,12 @@
+body{
+    background-color: lightgrey;
+}
+h1{
+    color: red;
+}
+.post{
+    background-color: bisque;
+}
+.content{
+    font-style: italic;
+}

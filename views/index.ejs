@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-it</title>
+    <link rel="stylesheet" href="/x.css">
+</head>
+<body>
+    <h1 >Welcome to Note-it</h1>
+    <p>Your personal note-taking application.</p>
+    <% for(p of post) { %>
+    <div class="post">
+        <h2  class="user"><%= p.title %></h2>
+        <h4 class="content"><%= p.content %></h4>
+        <br>
+        <a href="/post/<%= p.id %>">View Details</a>
+        <br>
+        <form action="/post/<%= p.id %>/delete" method="POST">
+             <button>Delete Note</button>
+        </form>
+    </div>
+<% } %>
+<br>
+    <a href="http://localhost:8080/post/new">Add New Note</a>
+
+</body>
+</html>
